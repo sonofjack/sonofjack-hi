@@ -1,12 +1,18 @@
 import React from 'react'
 import Link from 'next/link'
-import { Box, Heading } from '@chakra-ui/layout'
+import { Box, Button, Center, Stack, Heading, useColorMode, useColorModeValue } from '@chakra-ui/react'
 
 interface ComponentProps {
 	forcePurpleIcon?: boolean
 }
 
 const Home = ({ forcePurpleIcon = false }: ComponentProps): JSX.Element => {
+	const { colorMode, toggleColorMode } = useColorMode()
+	console.log('colorMode:', colorMode)
+
+	const bg = useColorModeValue('#000', 'red.200')
+	const color = useColorModeValue('white', 'gray.800')
+
 	return (
 		<Box p={5}>
 			Hello World.{' '}
@@ -18,6 +24,12 @@ const Home = ({ forcePurpleIcon = false }: ComponentProps): JSX.Element => {
 					This uses CSS Custom Properties!
 				</Heading>
 			</Box>
+			<Box mb={4} bg={bg} color={color}>
+				This boxs style will change based on the color mode.
+			</Box>
+			<Button size="sm" onClick={toggleColorMode}>
+				Toggle Mode
+			</Button>
 		</Box>
 	)
 }
