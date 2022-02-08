@@ -1,3 +1,3 @@
-//import { MotionBox } from './motion-box'
+import { MotionBox } from './motion-box'
 
-//export default { MotionBox }
+export default { MotionBox }
