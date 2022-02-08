@@ -1,7 +1,6 @@
 # sonofjack.github.io/sonofjack-hi
 
 ...
-
 ## About 
 
 

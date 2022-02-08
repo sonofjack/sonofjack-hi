@@ -1,56 +1,56 @@
-import React from "react";
-import NextDocument, { Html, Head, Main, NextScript } from "next/document";
+import React from 'react'
+import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
 
 export default class Document extends NextDocument {
-  render() {
-    return (
-      <Html lang="en">
-        <Head>
-          <link
-            rel="preload"
-            href="/fonts/UntitledSansWeb-Regular.woff"
-            as="font"
-            type="font/woff"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
-            href="/fonts/UntitledSansWeb-Regular.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
-            href="/fonts/UntitledSansWeb-Medium.woff"
-            as="font"
-            type="font/woff"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
-            href="/fonts/UntitledSansWeb-Medium.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
-            href="/fonts/soehne-mono-web-buch.woff"
-            as="font"
-            type="font/woff"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
-            href="/fonts/soehne-mono-web-buch.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-          <style
-            dangerouslySetInnerHTML={{
-              __html: `
+	render() {
+		return (
+			<Html lang="en">
+				<Head>
+					<link
+						rel="preload"
+						href="/fonts/UntitledSansWeb-Regular.woff"
+						as="font"
+						type="font/woff"
+						crossOrigin="anonymous"
+					/>
+					<link
+						rel="preload"
+						href="/fonts/UntitledSansWeb-Regular.woff2"
+						as="font"
+						type="font/woff2"
+						crossOrigin="anonymous"
+					/>
+					<link
+						rel="preload"
+						href="/fonts/UntitledSansWeb-Medium.woff"
+						as="font"
+						type="font/woff"
+						crossOrigin="anonymous"
+					/>
+					<link
+						rel="preload"
+						href="/fonts/UntitledSansWeb-Medium.woff2"
+						as="font"
+						type="font/woff2"
+						crossOrigin="anonymous"
+					/>
+					<link
+						rel="preload"
+						href="/fonts/soehne-mono-web-buch.woff"
+						as="font"
+						type="font/woff"
+						crossOrigin="anonymous"
+					/>
+					<link
+						rel="preload"
+						href="/fonts/soehne-mono-web-buch.woff2"
+						as="font"
+						type="font/woff2"
+						crossOrigin="anonymous"
+					/>
+					<style
+						dangerouslySetInnerHTML={{
+							__html: `
 @font-face {
   font-family: 'Untitled Sans';
   font-weight: 400;
@@ -71,14 +71,14 @@ export default class Document extends NextDocument {
   src: url('/fonts/soehne-mono-web-buch.woff2') format('woff2'), url('/fonts/soehne-mono-web-buch.woff') format('woff');
 }
 `,
-            }}
-          />
-        </Head>
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
+						}}
+					/>
+				</Head>
+				<body>
+					<Main />
+					<NextScript />
+				</body>
+			</Html>
+		)
+	}
 }
