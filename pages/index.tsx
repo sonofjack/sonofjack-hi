@@ -1,37 +1,21 @@
 import React from 'react'
-import Link from 'next/link'
-import { Box, Button, Center, Stack, Heading, useColorMode, useColorModeValue } from '@chakra-ui/react'
+import Home from '../components/home'
 
-interface ComponentProps {
-	forcePurpleIcon?: boolean
+export default function SSG() {
+	return <Home />
 }
 
-const Home = ({ forcePurpleIcon = false }: ComponentProps): JSX.Element => {
-	const { colorMode, toggleColorMode } = useColorMode()
-	console.log('colorMode:', colorMode)
-
-	const bg = useColorModeValue('#000', 'red.200')
-	const color = useColorModeValue('white', 'gray.800')
-
-	return (
-		<Box p={5}>
-			Hello World.{' '}
-			<Link href="/about" as={process.env.BACKEND_URL + '/about'}>
-				<a>About</a>
-			</Link>
-			<Box sx={{ '--my-color': '#53c8c4' }}>
-				<Heading color="var(--my-color)" size="lg">
-					This uses CSS Custom Properties!
-				</Heading>
-			</Box>
-			<Box mb={4} bg={bg} color={color}>
-				This boxs style will change based on the color mode.
-			</Box>
-			<Button size="sm" onClick={toggleColorMode}>
-				Toggle Mode
-			</Button>
-			<img src="/images/Autopilot-45.jpg" width="100px" />
-		</Box>
-	)
+// If you build and start the app, the date returned here will have the same
+// value for all requests, as this method gets executed at build time.
+export function getStaticProps() {
+	// Note that in this case we're returning the state directly, without creating
+	// the store first (like in /pages/ssr.js), this approach can be better and easier
+	return {
+		props: {
+			initialZustandState: {
+				lastUpdate: Date.now(),
+				light: false,
+			},
+		},
+	}
 }
-export default Home
