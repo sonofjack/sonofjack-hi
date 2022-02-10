@@ -8,8 +8,8 @@ const theme = extendTheme({
 		useSystemColorMode: false,
 	},
 	fonts: {
-		heading: 'Montserrat',
-		body: 'Montserrat',
+		heading: 'Roboto',
+		body: 'Roboto',
 	},
 	colors: {
 		// brand: {

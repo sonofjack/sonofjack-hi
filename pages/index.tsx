@@ -30,6 +30,7 @@ const Home = ({ forcePurpleIcon = false }: ComponentProps): JSX.Element => {
 			<Button size="sm" onClick={toggleColorMode}>
 				Toggle Mode
 			</Button>
+			<img src="/images/Autopilot-45.jpg" width="100px" />
 		</Box>
 	)
 }
