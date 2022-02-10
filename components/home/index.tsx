@@ -47,7 +47,7 @@ const Home = ({ forcePurpleIcon = false }: ComponentProps): JSX.Element => {
 			<Button size="sm" onClick={toggleColorMode}>
 				Toggle Mode
 			</Button>
-			<img src="/images/Autopilot-45.jpg" width="100px" />
+			<img src="./images/Autopilot-45.jpg" width="100px" />
 			<Box mt={10}>
 				<h1>
 					Count: <span>{count}</span>
